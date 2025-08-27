@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated E-commerce Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nahdi Online</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <header class="hero-section">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1150">
+                    <img src="img/watch.png" class="d-block w-10 hero-img" alt="Seasonal Collection">
+                    <div class="carousel-caption d-none d-md-block animate-caption">
+                        <h5 class="display-3">Seasonal Collection</h5>
+                        <p class="lead">Discover our latest styles and trends.</p>
+                        <a href="#" class="btn btn-primary btn-lg pulse-btn mt-3">Shop Now</a>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="1150">
+                    <img src="img/shoe.png" class="d-block w-10 hero-img" alt="Flash Sale">
+                    <div class="carousel-caption d-none d-md-block animate-caption">
+                        <h5 class="display-3">Flash Sale!</h5>
+                        <p class="lead">Limited time offers. Don't miss out!</p>
+                        <a href="#" class="btn btn-danger btn-lg pulse-btn mt-3">View Deals</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Product Grid -->
+    <main class="container my-5">
+        <h2 class="text-center mb-4 animate-on-scroll">Featured Products</h2>
+        <div class="row g-3">
+            <div class="col-md-1 col-lg-2 animate-on-scroll">
+                <div class="card product-card h-100 animate-hover-pulse">
+                    <img src="img/watch.png" class="card-img-top" alt="Product 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Awesome Product 1</h5>
+                        <p class="card-text text-muted">$49.99</p>
+                        <a href="#" class="btn btn-outline-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 col-lg-2 animate-on-scroll">
+                <div class="card product-card h-10 animate-hover-pulse">
+                    <img src="img/shoe.png" class="card-img-top" alt="Product 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Stylish Product 2</h5>
+                        <p class="card-text text-muted">$59.99</p>
+                        <a href="#" class="btn btn-outline-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 animate-on-scroll">
+                <div class="card product-card h-10 animate-hover-pulse">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Product 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Premium Product 3</h5>
+                        <p class="card-text text-muted">$89.99</p>
+                        <a href="#" class="btn btn-outline-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 animate-on-scroll">
+                <div class="card product-card h-100 animate-hover-pulse">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Product 4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Cool Product 4</h5>
+                        <p class="card-text text-muted">$39.99</p>
+                        <a href="#" class="btn btn-outline-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Call to Action Section with animation -->
+    <section class="call-to-action text-white py-5 bg-dark animate-on-scroll">
+        <div class="container text-center">
+            <h2 class="display-5">Join Our Newsletter</h2>
+            <p class="lead">Get the latest news and special offers delivered to your inbox!</p>
+            <form class="d-flex justify-content-center mt-4">
+                <input class="form-control me-2" type="email" placeholder="Enter your email" aria-label="Email" style="max-width: 400px;">
+                <button class="btn btn-light pulse-btn" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">MyShop</h5>
+                    <p>
+                        Your one-stop shop for everything you need. Quality products and unbeatable prices.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#" class="text-dark">About Us</a></li>
+                        <li><a href="#" class="text-dark">Privacy Policy</a></li>
+                        <li><a href="#" class="text-dark">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 bg-dark text-white">
+            © 2025 Copyright: MyShop
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

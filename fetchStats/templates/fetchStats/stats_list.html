@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block title %}
+Fetch Stats
+{% endblock %}
+
+{% block content %}
+<h1>Fetch Stats Page</h1>
+<p>This is the fetch stats page content.</p>
+
+<a class="btn btn_primary" href="{% url 'stats_create' %}">Create New Entry </a>
+<div class="container row gap-3 ">
+    {% for stat in stats_entries %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{fetchStats.photo.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Add Invoice</h5>
+            <p class="card-text">Welcome to Nahdi Online - Add your invoive details and enjoy the rewards points.</p>
+            <a href="{% url 'stats_create' %}" class="btn btn-primary">Add Invoice</a>   
+            <a href="{% url 'edit' customer.ID %}" class="btn btn-primary">Edit Invoice</a>   
+            <a href="{% url 'delete' customer.ID %}" class="btn btn-primary">Delete Invoice</a>   
+
+        </div>
+        <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="btn btn-primary">Add Invoice</a>
+        </div>
+    </div>
+</div>
+{% empty %}
+<p>No stats available.</p>
+{% endfor %}
+
+</div>
+{% endblock %}
