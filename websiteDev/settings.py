@@ -29,7 +29,7 @@ DEBUG = False
 if DEBUG:
     ALLOWED_HOSTS = []
 else:  
-    ALLOWED_HOSTS = [web-demo-oy77.onrender.com,
+    ALLOWED_HOSTS = ['web-demo-oy77.onrender.com',
                  ]
 
 
