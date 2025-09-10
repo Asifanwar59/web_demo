@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'fetchStats',
     'websiteDev',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

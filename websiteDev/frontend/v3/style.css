@@ -1,0 +1,117 @@
+/* Basic Reset and Body Styles */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Add space for the sticky navbar */
+main {
+    /* Set a padding equal to your navbar's height */
+    padding-top: 21rem; /* Adjust this value as needed */
+}
+/* Cube Container */
+.cube-container {
+    width: 600px; /* Size of the cube */
+    height: 600px;
+    perspective: 1200px; /* Creates the 3D perspective effect */
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d; /* Crucial for 3D children */
+    transform: rotateX(-20deg) rotateY(20deg); /* Initial tilt for better 3D view */
+    animation: rotate-cube 25s infinite linear; /* Continuous rotation */
+}
+
+/* Pause animation on hover */
+.cube:hover {
+    animation-play-state: paused;
+}
+
+/* Each Face of the Cube */
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #ddd;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Position each face in 3D space */
+.front {
+    transform: translateZ(300px);
+}
+.back {
+    transform: rotateY(180deg) translateZ(300px);
+}
+.left {
+    transform: rotateY(-90deg) translateZ(300px);
+}
+.right {
+    transform: rotateY(90deg) translateZ(300px);
+}
+
+/* Grid for the 4x4 product layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    width: 95%;
+    height: 95%;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Image styling within the product card */
+.product-card img {
+    width: 50%; /* Image takes up the full width of its parent */
+    height: 50%; /* Image takes up the full height of its parent */
+    position: center;
+    top: 0;
+    left: 0;
+    object-fit: cover; /* This is key: it fills the space while maintaining aspect ratio */
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+/* Hover effect for individual product cards */
+.product-card:hover {
+    background-color: #e0f2ff;
+    transform: scale(1.05) rotate(5deg);
+    cursor: pointer;
+}
+
+/* Continuous rotation animation for the cube */
+@keyframes rotate-cube {
+    from {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}

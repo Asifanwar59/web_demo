@@ -34,4 +34,7 @@ urlpatterns = [
     #path('admin/', my_admin_site.urls),
     path('fetchStats/', include('fetchStats.urls')),
     #path('fetchStats/', include('fetchStats.urls')),
+
+    # Include your REST API app's URLs at a specific path, e.g., 'api/'
+    path('api/', include('fetchStats.urls')),  # Assuming your API app is 'rest_api'
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

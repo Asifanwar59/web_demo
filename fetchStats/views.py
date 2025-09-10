@@ -5,6 +5,10 @@ from .models import stats
 from .forms import StatsForm
 from django.shortcuts import get_object_or_404
 
+#Rest API
+from rest_framework import viewsets
+from rest_framework import generics 
+from .serializers import TaskSerializer 
 
 
 def index(request):
@@ -59,3 +63,21 @@ def stats_delete(request, pk):
 
 # def services(request):
 #     return render(request, 'fetchStats/services.html')  
+
+# Rest API ViewSet
+class TaskViewSet(viewsets.ModelViewSet):
+    """
+    A simple ViewSet for viewing and editing tasks.
+    """
+    queryset = stats.objects.all()
+    serializer_class = TaskSerializer
+
+class StatsListCreate(generics.ListCreateAPIView):
+    queryset = stats.objects.all()
+    serializer_class = TaskSerializer
+
+
+class StatsDetails(generics.RetrieveUpdateDestroyAPIView):
+    queryset = stats.objects.all()
+    serializer_class = TaskSerializer
+
